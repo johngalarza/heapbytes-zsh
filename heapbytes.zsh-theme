@@ -1,10 +1,8 @@
 #Author : Heapbytes <Gourav> (https://github.com/heapbytes)
 
 PROMPT='
-┌─[%F{blue} %~%f] [%F{green} $(get_ip_address)%f] $(git_prompt_info)
-└─➜ '
-
-RPROMPT='[%F{red}%?%f]'
+┌─[%F{blue}$(pwd)%f] [%F{green}$(get_ip_address)%f] $(git_prompt_info)
+└─$(whoami)# '
 
 get_ip_address() {
   if [[ -n "$(ifconfig tun0 2>/dev/null)" ]]; then
